@@ -748,9 +748,9 @@ Where:
 ## Conclusion
 
 This design balances:
-- ✅ Simplicity with extensibility
-- ✅ Performance with correctness
-- ✅ Thread safety with concurrency
-- ✅ Clean code with practical implementation
+-  Simplicity with extensibility
+-  Performance with correctness
+-  Thread safety with concurrency
+-  Clean code with practical implementation
 
 The architecture is production-ready for the current requirements and designed to evolve with future needs.

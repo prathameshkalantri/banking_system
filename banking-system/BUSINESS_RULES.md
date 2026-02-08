@@ -26,11 +26,11 @@ This document details all business rules implemented in the banking system. Thes
 **Purpose**: Transactional account for daily banking activities
 
 **Characteristics**:
-- ✅ No minimum balance requirement
-- ✅ Unlimited deposits
-- ✅ Unlimited withdrawals
-- ✅ No interest earned
-- ✅ Transaction fees after free allowance
+-  No minimum balance requirement
+-  Unlimited deposits
+-  Unlimited withdrawals
+-  No interest earned
+-  Transaction fees after free allowance
 
 **Business Rules**:
 
@@ -61,11 +61,11 @@ Monthly Fee = (Total Transactions - 10) × $2.50 (if > 10 transactions)
 **Purpose**: Long-term savings with interest earnings
 
 **Characteristics**:
-- ✅ Minimum balance required
-- ✅ Unlimited deposits
-- ✅ Limited withdrawals
-- ✅ Monthly interest earned
-- ✅ No transaction fees
+-  Minimum balance required
+-  Unlimited deposits
+-  Limited withdrawals
+-  Monthly interest earned
+-  No transaction fees
 
 **Business Rules**:
 
@@ -103,11 +103,11 @@ Monthly Interest = Current Balance × 0.02
 **Purpose**: Add funds to an account
 
 **Rules**:
-- ✅ Amount must be positive (> $0.00)
-- ✅ No maximum limit
-- ✅ Always increases balance
-- ✅ Counts toward CHECKING transaction count
-- ✅ Does NOT count toward SAVINGS withdrawal count
+-  Amount must be positive (> $0.00)
+-  No maximum limit
+-  Always increases balance
+-  Counts toward CHECKING transaction count
+-  Does NOT count toward SAVINGS withdrawal count
 
 **Validation**:
 ```
@@ -128,12 +128,12 @@ Valid if:
 **Purpose**: Remove funds from an account
 
 **Rules**:
-- ✅ Amount must be positive (> $0.00)
-- ✅ Requires sufficient funds
-- ✅ Respects minimum balance (SAVINGS)
-- ✅ Respects withdrawal limit (SAVINGS)
-- ✅ Counts toward transaction count (CHECKING)
-- ✅ Counts toward withdrawal count (SAVINGS)
+-  Amount must be positive (> $0.00)
+-  Requires sufficient funds
+-  Respects minimum balance (SAVINGS)
+-  Respects withdrawal limit (SAVINGS)
+-  Counts toward transaction count (CHECKING)
+-  Counts toward withdrawal count (SAVINGS)
 
 **Validation**:
 
@@ -173,12 +173,12 @@ Valid if:
 **Purpose**: Move funds between two accounts
 
 **Rules**:
-- ✅ Amount must be positive (> $0.00)
-- ✅ Source and destination must be different
-- ✅ Follows withdrawal rules for source account
-- ✅ Follows deposit rules for destination account
-- ✅ Atomic operation (both succeed or both fail)
-- ✅ Creates two transaction records (one per account)
+-  Amount must be positive (> $0.00)
+-  Source and destination must be different
+-  Follows withdrawal rules for source account
+-  Follows deposit rules for destination account
+-  Atomic operation (both succeed or both fail)
+-  Creates two transaction records (one per account)
 
 **Validation**:
 ```
@@ -757,14 +757,14 @@ Account: Removed from bank
 ### Audit Trail Requirements
 
 **Every transaction must record**:
-1. ✅ Unique transaction ID
-2. ✅ Timestamp (millisecond precision)
-3. ✅ Transaction type
-4. ✅ Amount
-5. ✅ Balance before transaction
-6. ✅ Balance after transaction
-7. ✅ Transaction status (SUCCESS or FAILED)
-8. ✅ Failure reason (if applicable)
+1.  Unique transaction ID
+2.  Timestamp (millisecond precision)
+3.  Transaction type
+4.  Amount
+5.  Balance before transaction
+6.  Balance after transaction
+7.  Transaction status (SUCCESS or FAILED)
+8.  Failure reason (if applicable)
 
 **Guarantees**:
 - Immutable transaction records
@@ -813,10 +813,10 @@ Account: Removed from bank
 ## Conclusion
 
 These business rules ensure:
-- ✅ **Regulatory Compliance**: Proper audit trails and financial precision
-- ✅ **Customer Protection**: No unexpected fees, clear limits
-- ✅ **Business Viability**: Appropriate fees for CHECKING accounts
-- ✅ **Data Integrity**: Immutable transactions, atomic operations
-- ✅ **Transparency**: All rules clearly defined and enforced
+-  **Regulatory Compliance**: Proper audit trails and financial precision
+-  **Customer Protection**: No unexpected fees, clear limits
+-  **Business Viability**: Appropriate fees for CHECKING accounts
+-  **Data Integrity**: Immutable transactions, atomic operations
+-  **Transparency**: All rules clearly defined and enforced
 
 The system enforces all rules consistently, records all attempts (success and failure), and maintains complete audit trails for compliance and debugging.

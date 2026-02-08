@@ -1,0 +1,70 @@
+Build Challenge Instructions
+Review the requirements and submit your completed challenge
+Overview
+Complete the coding challenge assignments using Java or Python. Each assignment tests specific
+programming competencies and should be implemented with best practices.
+Implementation Steps
+• Create new Java or Python project in IDE
+• Implement required classes and/or files
+• Write comprehensive unit tests
+• Document code with comments
+Assignment 1
+• Required: true
+• Languages:
+•   - java
+•   - python
+• Short Description: Build a bank account system with transaction processing and history
+• Testing Objectives:
+•   - Object-oriented design
+•   - Collection management
+•   - Transaction validation
+•   - State management
+• Detailed Description: Build a bank account management system that handles multiple account
+types and transaction processing. The system must support two account types: CHECKING (no
+minimum balance, $2.50 fee per transaction after 10 free transactions per month) and SAVINGS
+(minimum balance of $100, earns 2% monthly interest, max 5 withdrawals per month).
+Implement these transaction types: DEPOSIT, WITHDRAWAL, and TRANSFER (between
+accounts). All transactions must be recorded with: transactionId, timestamp, type, amount,
+balanceBefore, balanceAfter, and status (SUCCESS/FAILED with reason). Implement classes:
+Account (accountNumber, accountType, balance, transactionHistory list,
+monthlyTransactionCount), Transaction (fields listed above), and Bank (accounts map). The
+Bank class must provide: openAccount(customerName, accountType, initialDeposit),
+closeAccount(accountNumber) - only if balance is zero, deposit(accountNumber, amount),
+withdraw(accountNumber, amount), transfer(fromAccount, toAccount, amount),
+getTransactionHistory(accountNumber, startDate, endDate), applyMonthlyInterest() - for savings
+accounts, and generateMonthlyStatement(accountNumber) - showing all transactions and
+ending balance. Reject transactions that would result in negative balance or violate account
+rules. Demonstrate with at least 4 accounts and 20 transactions including failed attempts.
+Assignment 2
+• Required: true
+• Languages:
+•   - java
+•   - python
+• Short Description: Create a student gradebook with weighted categories and GPA calculation
+• Testing Objectives:
+•   - Arithmetic calculations
+•   - Nested data structures
+•   - Weighted averages
+•   - Data validation and formatting
+• Detailed Description: Create a student gradebook system that tracks assignments across
+weighted categories and calculates final grades. Each course has grading categories with
+weights that must total 100%: HOMEWORK (20%), QUIZZES (20%), MIDTERM (25%),
+FINAL_EXAM (35%). Each category can have multiple assignments, and the category score is
+the average of all assignments within it. Final course grade is the weighted sum of category
+averages. Letter grades are assigned as: A (90-100), B (80-89), C (70-79), D (60-69), F (below
+60). GPA points are: A=4.0, B=3.0, C=2.0, D=1.0, F=0.0. Implement classes: Assignment (name,
+pointsEarned, pointsPossible, category), Course (courseName, creditHours, categories map
+with weights, assignments list), Student (studentId, name, courses list), and GradeBook
+(students map). The GradeBook class must provide: addStudent(studentId, name),
+enrollInCourse(studentId, courseName, creditHours), addAssignment(studentId, courseName,
+assignment), getCategoryAverage(studentId, courseName, category),
+getCourseGrade(studentId, courseName) - returns percentage and letter grade,
+calculateGPA(studentId) - weighted by credit hours, and generateTranscript(studentId) 
+formatted report showing all courses with grades and cumulative GPA. Handle edge cases:
+missing assignments scored as zero, categories with no assignments excluded from calculation.
+Demonstrate with 3 students each enrolled in 2-3 courses with varying assignments.
+Deliverables
+• Private GitHub repository URL where you are the collaborator
+• Complete source code including config files if any
+• Unit tests for all core methods
+• README with setup instructions, sample input/output, and assumptions documented

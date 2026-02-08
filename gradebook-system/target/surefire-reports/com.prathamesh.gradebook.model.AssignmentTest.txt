@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: com.prathamesh.gradebook.model.AssignmentTest
+-------------------------------------------------------------------------------
+Tests run: 29, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.047 s -- in com.prathamesh.gradebook.model.AssignmentTest

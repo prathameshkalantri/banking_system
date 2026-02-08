@@ -1,0 +1,8 @@
+com/prathamesh/gradebook/model/GradeTest.class
+com/prathamesh/gradebook/model/CourseTest.class
+com/prathamesh/gradebook/service/GradeBookTest.class
+com/prathamesh/gradebook/service/GradeCalculatorTest.class
+com/prathamesh/gradebook/service/GPACalculatorTest.class
+com/prathamesh/gradebook/service/TranscriptGeneratorTest.class
+com/prathamesh/gradebook/model/StudentTest.class
+com/prathamesh/gradebook/model/AssignmentTest.class
