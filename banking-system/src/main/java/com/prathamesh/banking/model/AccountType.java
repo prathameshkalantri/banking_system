@@ -1,7 +1,7 @@
 package com.prathamesh.banking.model;
 
 /**
- * Defines the types of bank accounts supported by the system.
+ * sDefines the types of bank accounts supported by the system.
  * 
  * <p>Each account type has distinct business rules:
  * <ul>
