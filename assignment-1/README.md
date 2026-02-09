@@ -69,7 +69,7 @@ BUILD SUCCESS
 ### 3. Run Demo
 
 ```bash
-mvn exec:java -Dexec.mainClass="com.prathamesh.banking.Main"
+mvn exec:java
 ```
 
 The demo will automatically:
