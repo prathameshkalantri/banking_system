@@ -236,11 +236,12 @@ All tests execute in under 1 second total.
 
 ### Design Patterns
 
-- **Immutable Value Objects**: Assignment and Grade
-- **Service Layer Pattern**: Separate business logic from domain models
+- **Facade Pattern**: GradeBook provides unified interface to subsystem
+- **Immutable Object Pattern**: Assignment and Grade with final fields
+- **Service Layer Pattern**: Stateless calculators for business logic
 - **Repository Pattern**: GradeBook as central student store
-- **Strategy Pattern**: Category-specific weight application
-- **Builder Pattern**: Complex object construction with validation
+- **Enum-based Strategy Pattern**: Category weights and LetterGrade conversions
+- **Defensive Programming**: Unmodifiable collections and safe returns
 
 ### Design Principles
 

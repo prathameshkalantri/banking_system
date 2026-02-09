@@ -196,7 +196,7 @@ public class Bank {
 - Mutable state (balance changes over time)
 - Defensive copying for transaction history
 - Business rule constants as static finals
-- Package-private mutators (only Bank can modify)
+- Public mutators with service-layer responsibility (only Bank should call them)
 
 **Methods**:
 ```java
@@ -205,12 +205,12 @@ public class Bank {
 + getBalance(): BigDecimal
 + getTransactionHistory(): List<Transaction>
 
-// Command methods (package-private)
-~ deposit(amount): BigDecimal
-~ withdraw(amount): BigDecimal
-~ applyMonthlyFee(): BigDecimal
-~ applyMonthlyInterest(): BigDecimal
-~ resetMonthlyCounters(): void
+// Command methods (public, but should only be called by Bank service)
++ deposit(amount): BigDecimal
++ withdraw(amount): BigDecimal
++ applyMonthlyFee(): BigDecimal
++ applyMonthlyInterest(): BigDecimal
++ resetMonthlyCounters(): void
 
 // Validation
 + canWithdraw(amount): boolean
@@ -526,15 +526,16 @@ BigDecimal balance = new BigDecimal("100.10")
 - Consistent with repository pattern
 - Allows for database query optimization later
 
-### 6. Package-Private Mutators
+### 6. Service Layer Encapsulation
 
-**Decision**: Account's deposit()/withdraw() are package-private
+**Decision**: Account's deposit()/withdraw() are public but should only be called by Bank service
 
 **Rationale**:
-- Only Bank should modify accounts
-- Prevents circumventing validation
-- Clear API boundaries
-- Enforces proper transaction recording
+- Service layer in different package (service vs model)
+- Package-private won't work across packages in Java
+- JavaDoc documents service-layer-only contract
+- Industry standard for layered architectures
+- Clear API boundaries maintained through documentation
 
 ---
 

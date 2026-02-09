@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.prathamesh.banking.service.BankTest" time="0.182" tests="33" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.prathamesh.banking.service.BankTest" time="0.114" tests="33" errors="0" skipped="0" failures="0">
   <properties>
     <property name="awt.toolkit" value="sun.awt.X11.XToolkit"/>
     <property name="java.specification.version" value="11"/>
@@ -14,7 +14,7 @@
     <property name="os.name" value="Linux"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="sun.boot.library.path" value="/usr/lib/jvm/java-11-openjdk-amd64/lib"/>
-    <property name="sun.java.command" value="/home/pbkalantri/intuit/prathameshkalantri-repo-7f92e288-88df-4103-960a-92c3ecd7576d/banking-system/target/surefire/surefirebooter-20260207185147842_3.jar /home/pbkalantri/intuit/prathameshkalantri-repo-7f92e288-88df-4103-960a-92c3ecd7576d/banking-system/target/surefire 2026-02-07T18-51-47_710-jvmRun1 surefire-20260207185147842_1tmp surefire_0-20260207185147842_2tmp"/>
+    <property name="sun.java.command" value="/home/pbkalantri/intuit/prathameshkalantri-repo-7f92e288-88df-4103-960a-92c3ecd7576d/banking-system/target/surefire/surefirebooter-20260208102047797_3.jar /home/pbkalantri/intuit/prathameshkalantri-repo-7f92e288-88df-4103-960a-92c3ecd7576d/banking-system/target/surefire 2026-02-08T10-20-47_695-jvmRun1 surefire-20260208102047797_1tmp surefire_0-20260208102047797_2tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="/home/pbkalantri/intuit/prathameshkalantri-repo-7f92e288-88df-4103-960a-92c3ecd7576d/banking-system/target/test-classes:/home/pbkalantri/intuit/prathameshkalantri-repo-7f92e288-88df-4103-960a-92c3ecd7576d/banking-system/target/classes:/home/pbkalantri/.m2/repository/org/junit/jupiter/junit-jupiter/5.10.0/junit-jupiter-5.10.0.jar:/home/pbkalantri/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.10.0/junit-jupiter-api-5.10.0.jar:/home/pbkalantri/.m2/repository/org/opentest4j/opentest4j/1.3.0/opentest4j-1.3.0.jar:/home/pbkalantri/.m2/repository/org/junit/platform/junit-platform-commons/1.10.0/junit-platform-commons-1.10.0.jar:/home/pbkalantri/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/home/pbkalantri/.m2/repository/org/junit/jupiter/junit-jupiter-params/5.10.0/junit-jupiter-params-5.10.0.jar:/home/pbkalantri/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.10.0/junit-jupiter-engine-5.10.0.jar:/home/pbkalantri/.m2/repository/org/junit/platform/junit-platform-engine/1.10.0/junit-platform-engine-1.10.0.jar:"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -30,7 +30,7 @@
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.awt.graphicsenv" value="sun.awt.X11GraphicsEnvironment"/>
-    <property name="surefire.real.class.path" value="/home/pbkalantri/intuit/prathameshkalantri-repo-7f92e288-88df-4103-960a-92c3ecd7576d/banking-system/target/surefire/surefirebooter-20260207185147842_3.jar"/>
+    <property name="surefire.real.class.path" value="/home/pbkalantri/intuit/prathameshkalantri-repo-7f92e288-88df-4103-960a-92c3ecd7576d/banking-system/target/surefire/surefirebooter-20260208102047797_3.jar"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="11.0.29+7-post-Ubuntu-1ubuntu122.04"/>
     <property name="user.name" value="pbkalantri"/>
@@ -56,37 +56,37 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="55.0"/>
   </properties>
-  <testcase name="testGenerateMonthlyStatement_NonExistentAccount" classname="com.prathamesh.banking.service.BankTest" time="0.013"/>
+  <testcase name="testGenerateMonthlyStatement_NonExistentAccount" classname="com.prathamesh.banking.service.BankTest" time="0.014"/>
   <testcase name="testGetTransactionHistory_NonExistentAccount" classname="com.prathamesh.banking.service.BankTest" time="0.002"/>
-  <testcase name="testDeposit_NonExistentAccount" classname="com.prathamesh.banking.service.BankTest" time="0.002"/>
-  <testcase name="testWithdraw_SavingsAccount_ExceedsLimit" classname="com.prathamesh.banking.service.BankTest" time="0.029"/>
-  <testcase name="testGetTransactionHistory_WithDateFilter" classname="com.prathamesh.banking.service.BankTest" time="0.004"/>
+  <testcase name="testDeposit_NonExistentAccount" classname="com.prathamesh.banking.service.BankTest" time="0.001"/>
+  <testcase name="testWithdraw_SavingsAccount_ExceedsLimit" classname="com.prathamesh.banking.service.BankTest" time="0.017"/>
+  <testcase name="testGetTransactionHistory_WithDateFilter" classname="com.prathamesh.banking.service.BankTest" time="0.001"/>
   <testcase name="testGenerateMonthlyStatement" classname="com.prathamesh.banking.service.BankTest" time="0.004"/>
   <testcase name="testTransfer_SameAccount" classname="com.prathamesh.banking.service.BankTest" time="0.001"/>
-  <testcase name="testCloseAccount_NonExistentAccount" classname="com.prathamesh.banking.service.BankTest" time="0.001"/>
-  <testcase name="testWithdraw_SavingsAccount_WithinLimit" classname="com.prathamesh.banking.service.BankTest" time="0.003"/>
-  <testcase name="testApplyMonthlyInterest_SavingsAccounts" classname="com.prathamesh.banking.service.BankTest" time="0.004"/>
-  <testcase name="testOpenAccount_CheckingAccount_WithInitialDeposit" classname="com.prathamesh.banking.service.BankTest" time="0.001"/>
-  <testcase name="testApplyMonthlyFeesAndResetCounters_CheckingAccount" classname="com.prathamesh.banking.service.BankTest" time="0.004"/>
-  <testcase name="testWithdraw_InsufficientFunds" classname="com.prathamesh.banking.service.BankTest" time="0.001"/>
-  <testcase name="testDeposit_ZeroAmount" classname="com.prathamesh.banking.service.BankTest" time="0.006"/>
-  <testcase name="testGetTransactionHistory_AllTransactions" classname="com.prathamesh.banking.service.BankTest" time="0.002"/>
-  <testcase name="testTransfer_FromNonExistentAccount" classname="com.prathamesh.banking.service.BankTest" time="0.003"/>
-  <testcase name="testGetAllAccounts" classname="com.prathamesh.banking.service.BankTest" time="0.004"/>
+  <testcase name="testCloseAccount_NonExistentAccount" classname="com.prathamesh.banking.service.BankTest" time="0.0"/>
+  <testcase name="testWithdraw_SavingsAccount_WithinLimit" classname="com.prathamesh.banking.service.BankTest" time="0.002"/>
+  <testcase name="testApplyMonthlyInterest_SavingsAccounts" classname="com.prathamesh.banking.service.BankTest" time="0.001"/>
+  <testcase name="testOpenAccount_CheckingAccount_WithInitialDeposit" classname="com.prathamesh.banking.service.BankTest" time="0.002"/>
+  <testcase name="testApplyMonthlyFeesAndResetCounters_CheckingAccount" classname="com.prathamesh.banking.service.BankTest" time="0.005"/>
+  <testcase name="testWithdraw_InsufficientFunds" classname="com.prathamesh.banking.service.BankTest" time="0.003"/>
+  <testcase name="testDeposit_ZeroAmount" classname="com.prathamesh.banking.service.BankTest" time="0.002"/>
+  <testcase name="testGetTransactionHistory_AllTransactions" classname="com.prathamesh.banking.service.BankTest" time="0.001"/>
+  <testcase name="testTransfer_FromNonExistentAccount" classname="com.prathamesh.banking.service.BankTest" time="0.002"/>
+  <testcase name="testGetAllAccounts" classname="com.prathamesh.banking.service.BankTest" time="0.003"/>
   <testcase name="testOpenAccount_CheckingAccount_ZeroDeposit" classname="com.prathamesh.banking.service.BankTest" time="0.001"/>
-  <testcase name="testGetAccount_ExistingAccount" classname="com.prathamesh.banking.service.BankTest" time="0.002"/>
-  <testcase name="testWithdraw_ValidWithdrawal" classname="com.prathamesh.banking.service.BankTest" time="0.002"/>
-  <testcase name="testGetAccount_NonExistentAccount" classname="com.prathamesh.banking.service.BankTest" time="0.002"/>
-  <testcase name="testOpenAccount_InvalidCustomerName" classname="com.prathamesh.banking.service.BankTest" time="0.004"/>
-  <testcase name="testTransfer_ValidTransfer" classname="com.prathamesh.banking.service.BankTest" time="0.004"/>
-  <testcase name="testOpenAccount_SavingsAccount_BelowMinimum" classname="com.prathamesh.banking.service.BankTest" time="0.004"/>
+  <testcase name="testGetAccount_ExistingAccount" classname="com.prathamesh.banking.service.BankTest" time="0.001"/>
+  <testcase name="testWithdraw_ValidWithdrawal" classname="com.prathamesh.banking.service.BankTest" time="0.001"/>
+  <testcase name="testGetAccount_NonExistentAccount" classname="com.prathamesh.banking.service.BankTest" time="0.001"/>
+  <testcase name="testOpenAccount_InvalidCustomerName" classname="com.prathamesh.banking.service.BankTest" time="0.001"/>
+  <testcase name="testTransfer_ValidTransfer" classname="com.prathamesh.banking.service.BankTest" time="0.002"/>
+  <testcase name="testOpenAccount_SavingsAccount_BelowMinimum" classname="com.prathamesh.banking.service.BankTest" time="0.002"/>
   <testcase name="testOpenAccount_NullAccountType" classname="com.prathamesh.banking.service.BankTest" time="0.002"/>
   <testcase name="testApplyMonthlyFeesAndResetCounters_SavingsAccount" classname="com.prathamesh.banking.service.BankTest" time="0.002"/>
-  <testcase name="testTransfer_InsufficientFunds" classname="com.prathamesh.banking.service.BankTest" time="0.003"/>
-  <testcase name="testCloseAccount_NonZeroBalance" classname="com.prathamesh.banking.service.BankTest" time="0.003"/>
+  <testcase name="testTransfer_InsufficientFunds" classname="com.prathamesh.banking.service.BankTest" time="0.001"/>
+  <testcase name="testCloseAccount_NonZeroBalance" classname="com.prathamesh.banking.service.BankTest" time="0.002"/>
   <testcase name="testOpenAccount_UniqueAccountNumbers" classname="com.prathamesh.banking.service.BankTest" time="0.001"/>
-  <testcase name="testCloseAccount_ZeroBalance" classname="com.prathamesh.banking.service.BankTest" time="0.002"/>
-  <testcase name="testDeposit_ValidDeposit" classname="com.prathamesh.banking.service.BankTest" time="0.002"/>
-  <testcase name="testTransfer_ToNonExistentAccount" classname="com.prathamesh.banking.service.BankTest" time="0.003"/>
-  <testcase name="testOpenAccount_SavingsAccount_ValidDeposit" classname="com.prathamesh.banking.service.BankTest" time="0.002"/>
+  <testcase name="testCloseAccount_ZeroBalance" classname="com.prathamesh.banking.service.BankTest" time="0.001"/>
+  <testcase name="testDeposit_ValidDeposit" classname="com.prathamesh.banking.service.BankTest" time="0.001"/>
+  <testcase name="testTransfer_ToNonExistentAccount" classname="com.prathamesh.banking.service.BankTest" time="0.001"/>
+  <testcase name="testOpenAccount_SavingsAccount_ValidDeposit" classname="com.prathamesh.banking.service.BankTest" time="0.0"/>
 </testsuite>

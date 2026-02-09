@@ -303,25 +303,41 @@ Total: 24.0 grade points / 7 credits = 3.43 GPA
 
 ## 6. Design Patterns
 
-### Builder Pattern (Implicit)
-
-Used in model classes where objects are constructed with validated parameters. Validation occurs during construction to ensure invalid objects are never created.
-
 ### Facade Pattern
 
-The GradeBook class acts as a facade, providing a simplified interface to the complex subsystem of students, courses, grades, and calculations.
+The GradeBook class acts as a facade, providing a simplified interface to the complex subsystem of students, courses, grades, and calculations. It encapsulates three service objects (GradeCalculator, GPACalculator, TranscriptGenerator) and provides a unified interface for all grade management operations.
 
-### Strategy Pattern (Implicit)
-
-Different calculator services (GradeCalculator, GPACalculator) implement different calculation strategies while maintaining consistent interfaces.
+**Implementation**: GradeBook class with composed calculator services
 
 ### Immutable Object Pattern
 
-Assignment and Grade classes are immutable after creation, preventing accidental modifications and ensuring thread safety.
+Assignment and Grade classes are immutable after creation, preventing accidental modifications and ensuring thread safety. Both classes are declared as `final` with all fields being `private final`, and provide no setter methods.
 
-### Null Object Pattern
+**Implementation**: Assignment and Grade classes
 
-The system returns empty collections instead of null when no results are found, reducing null pointer exceptions.
+### Service Layer Pattern
+
+The system uses stateless service classes (GradeCalculator, GPACalculator, TranscriptGenerator) that encapsulate complex business logic for calculations. These services are reusable, testable, and maintain no state between method calls.
+
+**Implementation**: All calculator classes in the service package
+
+### Repository Pattern
+
+GradeBook acts as a repository, managing the storage and retrieval of Student objects using an internal Map. It provides methods for adding, retrieving, and querying students without exposing the underlying data structure.
+
+**Implementation**: GradeBook with `Map<String, Student>` for student storage
+
+### Enum-based Strategy Pattern
+
+Category and LetterGrade enums determine behavior polymorphically. The Category enum defines different weight values for each category (HOMEWORK: 0.20, QUIZZES: 0.20, MIDTERM: 0.25, FINAL_EXAM: 0.35), and LetterGrade enum determines GPA points and grade ranges based on percentage.
+
+**Implementation**: Category and LetterGrade enums with behavioral methods
+
+### Defensive Programming Pattern
+
+The system returns unmodifiable collections and handles empty cases gracefully rather than returning null. Methods use `Collections.unmodifiableList()`, `Collections.unmodifiableCollection()`, and filter operations that return empty collections when no results are found, reducing null pointer exceptions.
+
+**Implementation**: All getter methods returning collections
 
 ---
 

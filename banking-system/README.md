@@ -210,11 +210,11 @@ mvn clean test jacoco:report
 
 ### Design Patterns
 
-- **Builder Pattern**: Immutable Transaction construction
-- **Strategy Pattern**: Account type-specific behavior
-- **Repository Pattern**: Bank as central data store
-- **Factory Pattern**: ID generation
-- **Dependency Injection**: Validator injection
+- **Builder Pattern**: Immutable Transaction construction with fluent API
+- **Enum-based Strategy**: AccountType (CHECKING/SAVINGS) determines business rule behavior
+- **Repository Pattern**: Bank as central account store with ConcurrentHashMap
+- **Factory Pattern**: IdGenerator for unique account and transaction IDs
+- **Dependency Injection**: TransactionValidator injected into Bank service
 
 ### Design Principles
 

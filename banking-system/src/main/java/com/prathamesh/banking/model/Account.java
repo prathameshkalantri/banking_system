@@ -197,6 +197,7 @@ public class Account {
     
     /**
      * Processes a successful deposit transaction.
+     * Should only be called by Bank service layer.
      * 
      * @param amount amount to deposit (must be positive)
      * @return the balance after deposit
@@ -216,6 +217,7 @@ public class Account {
     /**
      * Processes a successful withdrawal transaction.
      * Caller must validate using {@link #canWithdraw(BigDecimal)} first.
+     * Should only be called by Bank service layer.
      * 
      * @param amount amount to withdraw (must be positive and validated)
      * @return the balance after withdrawal
@@ -238,6 +240,7 @@ public class Account {
     
     /**
      * Adds a transaction to the account's history.
+     * Should only be called by Bank service layer.
      * 
      * @param transaction transaction to record
      */
@@ -249,6 +252,7 @@ public class Account {
     /**
      * Applies monthly transaction fee for CHECKING accounts.
      * Fee is $2.50 for each transaction beyond the 10th in the month.
+     * Should only be called by Bank service layer during monthly processing.
      * 
      * @return total fees charged, or zero if no fees apply
      */
@@ -272,6 +276,7 @@ public class Account {
     /**
      * Applies monthly interest for SAVINGS accounts.
      * Interest rate is 2% applied to current balance.
+     * Should only be called by Bank service layer during monthly processing.
      * 
      * @return interest earned, or zero if not a SAVINGS account
      */
@@ -291,6 +296,7 @@ public class Account {
     /**
      * Resets monthly counters.
      * Should be called at the start of each month.
+     * Should only be called by Bank service layer during monthly processing.
      */
     public void resetMonthlyCounters() {
         monthlyTransactionCount = 0;
